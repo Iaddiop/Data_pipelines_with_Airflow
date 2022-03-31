@@ -15,7 +15,7 @@ Different steps will be taken in this project:
     * [Loading fact](https://github.com/Iaddiop/Data_pipelines_with_Airflow/blob/master/plugins/operators/load_fact.py) table  : songplays
     * [Loading dimension](https://github.com/Iaddiop/Data_pipelines_with_Airflow/blob/master/plugins/operators/load_dimension.py) tables : users, songs, artists, time
     * [Data quality](https://github.com/Iaddiop/Data_pipelines_with_Airflow/blob/master/plugins/operators/data_quality.py) checking
-- Create The DAG
+- Create The [DAG](https://github.com/Iaddiop/Data_pipelines_with_Airflow/tree/master/dags)
 
 ## Data Sources :
 The data stored in 2 datasets that reside in S3 :
