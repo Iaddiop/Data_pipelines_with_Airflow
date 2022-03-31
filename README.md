@@ -11,10 +11,10 @@ Below the digram that explain the pipeline process : ![image info](./dag.png)
 Different steps will be taken in this project:
 - Create a [Redshift cluster for the DWH](https://github.com/Iaddiop/Cloud_Data_Warehouse/blob/master/Creating%20Redshift%20Cluster.ipynb)
 - create operators for :
-    * Loading staging tables in redshift DB
-    * Loading fact table  : songplays
-    * Loading dimension tables : users, songs, artists, time
-    * Data quality checking
+    * [Loading staging](https://github.com/Iaddiop/Data_pipelines_with_Airflow/blob/master/plugins/operators/stage_redshift.py) tables in redshift DB
+    * [Loading fact](https://github.com/Iaddiop/Data_pipelines_with_Airflow/blob/master/plugins/operators/load_fact.py) table  : songplays
+    * [Loading dimension](https://github.com/Iaddiop/Data_pipelines_with_Airflow/blob/master/plugins/operators/load_dimension.py) tables : users, songs, artists, time
+    * [Data quality](https://github.com/Iaddiop/Data_pipelines_with_Airflow/blob/master/plugins/operators/data_quality.py) checking
 - Create The DAG
 
 ## Data Sources :
@@ -31,18 +31,4 @@ To run this project, please folowing the below steps :
 
 1 - Create Redshift cluster : run the Jupyter Notebook to create [Redshift cluster](https://github.com/Iaddiop/Cloud_Data_Warehouse/blob/master/Creating%20Redshift%20Cluster.ipynb)
 
-2 - Create operators
-
-3 - Create DAG for the data pipelines
-
-## Data quality checking :
-
-**- songplays** : 333 rows
-
-**- users** : 105 rows
-
-**- songs** : 14896 rows
-
-**- artists** : 10025 rows
-
-**- time** : 333 rows
+2 - Run DAG in Airflow
